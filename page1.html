@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>NADRA-VISION</title>
+    <style>
+       * { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin:0;
+  font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans";
+  color:#0b1325;
+  background:#ffffff;
+}
+
+
+.hero{
+  padding:64px 16px;
+  color:#ffffff;
+  text-align:center;
+  background-image: url(img/b2.jpg);
+  width: 100%;
+  background-size: cover;
+}
+.hero h1{
+  margin:0 0 8px;
+  font-size:clamp(36px, 4vw, 56px);
+  letter-spacing:.5px;
+  color: #e5e7eb;
+}
+.hero p{
+  margin:0;
+  font-size:clamp(14px, 2vw, 18px);
+  opacity:.9;
+}
+
+
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:24px;
+}
+
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0,1fr));
+  gap:20px;
+}
+@media (max-width:1100px){ .grid{ grid-template-columns:repeat(3, minmax(0,1fr)); } }
+@media (max-width:780px){ .grid{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
+@media (max-width:480px){ .grid{ grid-template-columns:1fr; } }
+
+.card{
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  box-shadow:0 8px 24px rgba(2,8,23,.08);
+  padding:14px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(2,8,23,.12);
+  border-color:#d1d5db;
+}
+
+
+.card__media{
+  background:#f8fafc;
+  border-radius:10px;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  position:relative;
+}
+.card__media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;       
+  display:block;
+}
+
+.brand{
+  color:#6b7280;
+  font-size:13px;
+  text-transform:lowercase;
+  letter-spacing:.3px;
+}
+.title{ margin:2px 0; font-weight:650; font-size:16px; }
+.meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+.stars{ color:#f59e0b; font-size:14px; letter-spacing:1px; white-space:nowrap; }
+.price{ font-weight:700; color:#047857; }
+.actions{ display:flex; justify-content:flex-end; }
+.cartbtn{
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid #e5e7eb;
+  background:#ecfdf5;
+  cursor:pointer;
+  font-weight:600;
+}
+.cartbtn:hover{ border-color:#a7f3d0; }
+
+
+.pager{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  align-items:center;
+  margin-top:24px;
+}
+.pagebtn, .page-link{
+  min-width:44px;
+  height:44px;
+  padding:0 14px;
+  border-radius:10px;
+  border:0;
+  background:#0f766e;
+  color:#ffffff;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 8px 24px rgba(2,8,23,.08);
+  display:inline-grid;
+  place-items:center;
+  text-decoration:none;
+}
+.pagebtn[aria-current="page"], .page-link[aria-current="page"]{ background:#115e59; }
+.page-link.secondary{ background:#0ea5e9; }
+
+.sr-only{
+  position:absolute !important;
+  width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+    </style>
+</head>
+<body>
+
+   <section id="header">
+    <a href="a" class="logo"><img src="img/nadaaar_resized.png" alt=""></a>
+    
+    
+    <div id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div>
+        <ul id="navbar">
+            <li><a  href="main.html">Home</a></li>
+            <li><a class="active" href="page1.html">Collections</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</section>
+
+   <section class="hero" role="banner">
+    <h1>#stayhome</h1>
+    
+   </section>
+
+   <main class="container" id="content">
+    <section aria-labelledby="products-heading">
+      <h2 id="products-heading" class="sr-only">Produits</h2>
+
+      <div class="grid" role="list">
+        <!-- 1 -->
+        <article class="card" role="listitem">
+          <div class="card__media">
+            <img src="glasses/w1.jpg" alt="Lunettes rectangulaires noir mat sur fond blanc" loading="lazy" decoding="async">
+          </div>
+         
+          <h3 class="title">Lunettes Classiques</h3>
+          <div class="meta"><div class="price">340 DH</div></div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <!-- 2 -->
+        <article class="card" role="listitem">
+          <div class="card__media">
+            <img src="glasses/w2.jpg" alt="Monture ronde métal doré vue de trois-quarts" loading="lazy" decoding="async">
+          </div>
+          
+          <h3 class="title">Lunettes Ronde Métal</h3>
+          <div class="meta"><div class="price">320 DH</div></div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <!-- 3 -->
+        <article class="card" role="listitem">
+          <div class="card__media">
+            <img src="glasses/w3.jpg" alt="Monture écaille brune forme wayfarer" loading="lazy" decoding="async">
+          </div>
+          
+          <h3 class="title">Lunettes Écaille</h3>
+          <div class="meta"><div class="price">290 DH</div></div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <!-- 4 -->
+        <article class="card" role="listitem">
+          <div class="card__media">
+            <img src="glasses/w4.jpg" alt="Monture transparente carrée, branches fines" loading="lazy" decoding="async">
+          </div>
+          
+          <h3 class="title">Lunettes Transparentes</h3>
+          <div class="meta"><div class="price">500 DH</div></div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <!-- 5 -->
+        <article class="card" role="listitem">
+          <div class="card__media">
+            <img src="glasses/w5.jpg" alt="Monture fine titane gris, forme rectangulaire" loading="lazy" decoding="async">
+          </div>
+         
+          <h3 class="title">Titane Léger</h3>
+          <div class="meta"><div class="price">450 DH</div></div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <!-- 6 -->
+        <article class="card" role="listitem">
+          <div class="card__media">
+            <img src="glasses/w6.jpg" alt="Monture demi-lune noire façon clubmaster" loading="lazy" decoding="async">
+          </div>
+          
+          <h3 class="title">Clubmaster Noir</h3>
+          <div class="meta"><div class="price">450 DH</div></div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <!-- 7 -->
+        <article class="card" role="listitem">
+          <div class="card__media">
+            <img src="glasses/w7.jpg" alt="Monture ronde acétate bleu translucide" loading="lazy" decoding="async">
+          </div>
+          
+          <h3 class="title">Ronde Bleu</h3>
+          <div class="meta"><div class="price">340 DH</div></div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <!-- 8 -->
+        <article class="card" role="listitem">
+          <div class="card__media">
+            <img src="glasses/w8.jpg" alt="Monture cateye noire élégante" loading="lazy" decoding="async">
+          </div>
+         
+          <h3 class="title">Cat-Eye Élégante</h3>
+          <div class="meta"><div class="price">340 DH</div></div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <!-- 9 -->
+        <article class="card" role="listitem">
+          <div class="card__media">
+            <img src="glasses/w9.jpg" alt="Monture rectangulaire rouge, esprit mode" loading="lazy" decoding="async">
+          </div>
+        
+          <h3 class="title">Rectangulaire Rouge</h3>
+          <div class="meta"><div class="price">600 DH</div></div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <!-- 10 -->
+        <article class="card" role="listitem">
+          <div class="card__media">
+            <img src="glasses/w10.jpg" alt="Monture aviateur fine argentée" loading="lazy" decoding="async">
+          </div>
+          
+          <h3 class="title">Aviateur Argent</h3>
+          <div class="meta"><div class="price">500 DH</div></div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <!-- 11 -->
+        <article class="card" role="listitem">
+          <div class="card__media">
+            <img src="glasses/w11.jpg" alt="Monture oversize noire tendance" loading="lazy" decoding="async">
+          </div>
+         
+          <h3 class="title">Oversize Noir</h3>
+          <div class="meta"><div class="price">340 DH</div></div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <!-- 12 -->
+        <article class="card" role="listitem">
+          <div class="card__media">
+            <img src="glasses/w12.jpg" alt="Monture carrée écaille claire" loading="lazy" decoding="async">
+          </div>
+         
+          <h3 class="title">Carrée Écaille</h3>
+          <div class="meta"><div class="price">490 DH</div></div>
+          <div class="stars">★★★★★</div>
+        </article>
+      </div>
+
+      
+      <nav class="pager" role="navigation" aria-label="Pagination">
+        <span class="pagebtn" aria-current="page">1</span>
+        <a class="page-link" href="page2.html" aria-label="Aller à la page 2">2</a>
+        <a class="page-link secondary" href="page2.html" aria-label="Page suivante">→</a>
+      </nav>
+    </section>
+   </main>
+  <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float" id="whatsappFloat">
+        <a href="https://wa.me/212674647750" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp whatsapp-icon"></i>
+            <span class="whatsapp-text">Order Now</span>
+        </a>
+    </div>
+<footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="about.html">about us</a></li>
+  	 				<li><a href="savoirplus.html">our services</a></li>
+  	 				
+  	 			</ul>
+  	 		</div>
+  	 		
+  	 		<div class="footer-col">
+  	 			<h4>online shop</h4>
+  	 			<ul>
+  	 				<li><a href="page1.html">Eyeglasses</a></li>
+  	 				<li><a href="page2.html">Sunglasses</a></li>
+  	 				
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer>
+   <script src="script.js"></script>
+</body>
+</html>

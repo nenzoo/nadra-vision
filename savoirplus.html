@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/icon.png">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>NADRA-VISION</title>
+    <style>
+      body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;color:#0b0f1a;background:#ffffff;}
+      img{max-width:100%;height:auto;}
+      .container{max-width:1180px;margin:0 auto;padding:0 20px}
+
+      .hero{position:relative;padding:64px 0;background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%)}
+      .hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center}
+      .badge{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;background:#eef6ff;border:1px solid #d7e9ff;color:#165ea6;font-weight:700;font-size:12px;letter-spacing:.4px;text-transform:uppercase}
+      .title{font-size:clamp(28px,4.4vw,48px);line-height:1.1;margin:14px 0 10px;font-weight:900}
+      .lead{font-size:clamp(16px,2.2vw,18px);color:#5f6b7a;max-width:58ch}
+      .hero-card{background:#fff;border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,.12);padding:22px}
+      .hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+      .kpi{background:#f6f9fe;border:1px solid #e6eefb;border-radius:14px;padding:16px;text-align:center}
+      .kpi b{display:block;font-size:22px}
+
+      section{padding:64px 0}
+      .section-title{font-size:28px;margin:0 0 10px}
+      .section-lead{color:#5f6b7a;max-width:70ch}
+
+      .features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px}
+      .feature{background:#ffffff;border:1px solid #ebf1fa;border-radius:16px;box-shadow:0 6px 16px rgba(0,0,0,.08);padding:22px}
+      .feature h3{margin:6px 0 6px}
+      .pill{display:inline-block;background:#eef6ff;border:1px solid #d7e9ff;color:#165ea6;padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px}
+
+      .split{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+      .card-dark{background:#0f1729;color:#e8f0ff;border-radius:16px;padding:28px;box-shadow:0 20px 40px rgba(0,0,0,.12)}
+      .list{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+      .list li{display:flex;gap:10px;align-items:flex-start}
+      .tick{width:22px;height:22px;display:inline-grid;place-items:center;flex:0 0 22px;border-radius:6px;background:rgba(30,144,255,.14);border:1px solid rgba(30,144,255,.35)}
+
+      .testimonial{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px}
+      .quote{background:#fff;border:1px solid #ebf1fa;border-radius:16px;padding:20px;box-shadow:0 6px 16px rgba(0,0,0,.08)}
+      .quote p{color:#324255}
+      .quote .name{font-weight:700;margin-top:8px}
+
+      .cta{background:linear-gradient(180deg,#0f1729 0%,#0b1220 100%);color:#dfe9ff;border-radius:24px;padding:38px;display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:center}
+      .cta .actions{display:flex;gap:12px;flex-wrap:wrap}
+      .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 18px;font-weight:600;text-decoration:none}
+      .btn.primary{background:#1eff9a;color:#fff;box-shadow:0 10px 30px rgba(30, 255, 38, 0.35)}
+      .btn.primary:hover{background:#18d3c0}
+      .btn.ghost{background:#f5f8fc;color:#0b1220}
+
+      @media (max-width: 960px){
+        .hero .wrap{grid-template-columns:1fr}
+        .hero-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+        .features{grid-template-columns:1fr 1fr}
+        .split{grid-template-columns:1fr}
+        .testimonial{grid-template-columns:1fr}
+        .cta{grid-template-columns:1fr}
+      }
+      @media (max-width: 580px){
+        .features{grid-template-columns:1fr}
+      }
+
+    </style>
+</head>
+<body>
+   <section id="header">
+    <a href="a" class="logo"><img src="img/nadaaar_resized.png" alt=""></a>
+    
+    
+    <div id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div>
+        <ul id="navbar">
+            <li><a  href="main.html">Home</a></li>
+            <li><a href="page1.html">Collections</a></li>
+            <li><a class="active" href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</section>
+
+  
+
+ 
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <span class="badge">En savoir plus</span>
+          <h1 class="title">La clarté rencontre le design.</h1>
+          <p class="lead">Chez <strong>LAVA OPTIC</strong>, nous allions technologies de pointe et accompagnement humain pour offrir des examens précis, des verres performants et des montures qui vous ressemblent.</p>
+          <div class="hero-grid">
+            <div class="kpi"><b>1000+</b><span>Clients satisfaits</span></div>
+            <div class="kpi"><b>&lt; 30 min</b><span>Examens rapides</span></div>
+            <div class="kpi"><b>24 mois</b><span>Garantie montures</span></div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="img/magas.png" alt="Façade de la boutique LAVA OPTIC" style="border-radius:12px" />
+        </div>
+      </div>
+    </section>
+
+    
+    <section>
+      <div class="container">
+        <h2 class="section-title">Ce que nous faisons</h2>
+        <p class="section-lead">Notre équipe accompagne votre vision au quotidien, du diagnostic à la sélection de la monture idéale.</p>
+        <div class="features">
+          <article class="feature">
+            <span class="pill">Examens de vue</span>
+            <h3>Précision et confort</h3>
+            <p>Équipements modernes, mesures exactes et conseils clairs pour un confort visuel durable.</p>
+          </article>
+          <article class="feature">
+            <span class="pill">Montures & Verres</span>
+            <h3>Style et performance</h3>
+            <p>Verres anti‑lumière bleue, progressifs, polarisés — associés à des montures design et résistantes.</p>
+          </article>
+          <article class="feature">
+            <span class="pill">Suivi</span>
+            <h3>Service après‑vente dédié</h3>
+            <p>Ajustages, réparations et contrôle de la vision pour assurer la longévité de votre équipement.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+   
+    <section>
+      <div class="container split">
+        <div class="card-dark">
+          <h3>Technologie au service de vos yeux</h3>
+          <ul class="list">
+            <li><span class="tick">✓</span><span>Topographie & réfractométrie pour des mesures fines.</span></li>
+            <li><span class="tick">✓</span><span>Calcul de verres sur‑mesure selon votre usage (écran, conduite, sport).</span></li>
+            <li><span class="tick">✓</span><span>Matériaux légers, résistants et anti‑reflets de dernière génération.</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="section-title">Notre promesse</h3>
+          <p class="section-lead">Transparence, qualité et accompagnement. Nous prenons le temps de comprendre votre besoin pour vous proposer la meilleure solution, au juste prix.</p>
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px">
+            <div class="kpi"><b>48h</b><span>Montage express</span></div>
+            <div class="kpi"><b>+200</b><span>Modèles en magasin</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section>
+      <div class="container">
+        <h2 class="section-title">Ils nous font confiance</h2>
+        <div class="testimonial">
+          <div class="quote">
+            <p>« Service attentionné et très professionnel. Mes verres anti‑lumière bleue ont changé mes journées devant l’ordinateur ! »</p>
+            <div class="name">— Nadia B.</div>
+          </div>
+          <div class="quote">
+            <p>« Montures superbes, conseils précis et délais rapides. Je recommande sans hésiter. »</p>
+            <div class="name">— Karim A.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="rdv" class="container">
+      <div class="cta">
+        <div>
+          <h3 style="margin:0 0 8px">Prêt·e à voir la différence ?</h3>
+          <p style="margin:0;color:#a9b6cd">Contactez‑nous pour un examen de vue ou venez essayer nos nouvelles collections en boutique.</p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="tel:+212000000000">Appeler</a>
+          <a class="btn ghost" href="contact.html">Nous écrire</a>
+          <a class="btn ghost" href="main.html">Retour à l’accueil</a>
+        </div>
+      </div>
+    </section>
+    <section>
+      
+    </section>
+  <footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="about.html">about us</a></li>
+  	 				<li><a href="savoirplus.html">our services</a></li>
+  	 				
+  	 			</ul>
+  	 		</div>
+  	 		
+  	 		<div class="footer-col">
+  	 			<h4>online shop</h4>
+  	 			<ul>
+  	 				<li><a href="page1.html">Eyeglasses</a></li>
+  	 				<li><a href="page2.html">Sunglasses</a></li>
+  	 				
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer>
+
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>NADRA-VISION</title>
+    <style>
+       * { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin:0;
+  font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans";
+  color:#0b1325;
+  background:#ffffff;
+}
+
+
+.hero{
+  padding:64px 16px;
+  color:#ffffff;
+  text-align:center;
+  background: radial-gradient(1200px 400px at 50% -200px, #334155 10%, #0f172a 60%), #0f172a;
+}
+.hero h1{
+  margin:0 0 8px;
+  font-size:clamp(36px, 4vw, 56px);
+  letter-spacing:.5px;
+  color: #e5e7eb;
+}
+.hero p{
+  margin:0;
+  font-size:clamp(14px, 2vw, 18px);
+  opacity:.9;
+}
+h1 {
+  font-size: 0px;
+}
+
+.about-us {
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.about-col {
+
+  flex-basis: 48%;
+  padding: 30px 2px;
+}
+
+.about-col img {
+  width: 100%;
+  margin-left: 80px;
+  height: 98%;
+
+}
+
+.about-col h1 {
+  padding-top: 0;
+  font-size: 30px;
+}
+
+.about-col p {
+  padding: 10px 0 25px;
+}
+
+.row {
+  display: flex;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.btn-main {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  padding: 12px 34px;
+  font-size: 13px;
+  background-color: hsla(188, 100%, 50%, 0.3);
+  position: relative;
+  cursor: pointer;
+}
+
+.btn-main:hover {
+  border: 1px solid rgb(70, 21, 21);
+  background: rgb(2, 134, 90);
+  transition: 1s;
+  color: rgb(255, 255, 255);
+
+}
+.btn:hover {
+  border: 1px solid rgb(3, 255, 184);
+  background: rgb(4, 121, 74);
+  transition: 1s;
+  color: rgb(255, 255, 255);
+
+}
+.btn-2 {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  margin-left: 30%;
+}
+
+.btn-2:hover {
+  border: 1px solid rgb(255, 3, 3);
+  background: rgb(255, 32, 32);
+  transition: 1s;
+  color: rgb(255, 255, 255);
+
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+   <section id="header">
+    <a href="main.html" class="logo"><img src="img/nadaaar_resized.png" alt=""></a>
+    
+    
+    <div id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div>
+        <ul id="navbar">
+            <li><a  href="main.html">Home</a></li>
+            <li><a href="page1.html">Collections</a></li>
+            <li><a class="active" href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</section>
+
+   <section class="hero" role="banner">
+    <h1>#KnowUs</h1>
+    
+   </section>
+<!------------------------about us content----------------------->
+   <section class="about-us">
+      <div class="row">
+         <div class="about-col">
+            <h1 >Who we are ?</h1>
+            <p>At NADRA-VISION, we combine innovation, technology, and expertise to deliver high-quality optical solutions. Our mission is to provide customers with modern eyewear and reliable eye-care services, ensuring clarity and style in everyday life.</p>
+         <a href="savoirplus.html" class="btn">En SAVOIR PLUS</a>
+            </div>
+            <div class="about-col">
+               <img src="img/magas2.png" alt="">
+            </div>
+      </div>
+
+   </section>
+  <footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="about.html">about us</a></li>
+  	 				<li><a href="savoirplus.html">our services</a></li>
+  	 				
+  	 			</ul>
+  	 		</div>
+  	 		
+  	 		<div class="footer-col">
+  	 			<h4>online shop</h4>
+  	 			<ul>
+  	 				<li><a href="page1.html">Eyeglasses</a></li>
+  	 				<li><a href="page2.html">Sunglasses</a></li>
+  	 				
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer>
+
+   <script src="script.js"></script>
+</body>
+</html>
