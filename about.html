@@ -97,37 +97,86 @@ h1 {
 
 .btn-main:hover {
   border: 1px solid rgb(70, 21, 21);
-  background: rgb(2, 134, 90);
+  background: rgb(0, 0, 0);
   transition: 1s;
   color: rgb(255, 255, 255);
 
 }
 .btn:hover {
-  border: 1px solid rgb(3, 255, 184);
-  background: rgb(4, 121, 74);
+  border: 1px solid rgb(61, 0, 0);
+  background: rgb(0, 0, 0);
   transition: 1s;
   color: rgb(255, 255, 255);
 
 }
-.btn-2 {
-  display: inline-block;
-  text-decoration: none;
-  color: black;
-  border: 1px solid black;
-  padding: 12px 34px;
-  font-size: 13px;
-  background: transparent;
-  position: relative;
-  cursor: pointer;
-  margin-left: 30%;
+
+
+@media (max-width: 1200px) {
+  .hero {
+    padding: 72px 20px; 
+    background: radial-gradient(1000px 360px at 50% -160px, #334155 10%, #0f172a 60%), #0f172a;
+  }
+  .about-us { width: 88%; }
+  .about-col img { margin-left: 40px; } 
 }
 
-.btn-2:hover {
-  border: 1px solid rgb(255, 3, 3);
-  background: rgb(255, 32, 32);
-  transition: 1s;
-  color: rgb(255, 255, 255);
 
+@media (max-width: 992px) {
+  .hero {
+    padding: 64px 16px;
+    background: radial-gradient(900px 320px at 50% -140px, #334155 10%, #0f172a 60%), #0f172a;
+  }
+  .about-us { width: 92%; padding-top: 64px; }
+  .row { flex-wrap: wrap; gap: 24px; }
+  .about-col { flex-basis: 100%; padding: 16px 0; }
+  .about-col img {
+    margin-left: 0;
+    max-width: 540px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; 
+  }
+  .about-col h1 { font-size: 28px; }
+  .about-col p { font-size: 16px; }
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 48px 14px;
+    background: radial-gradient(760px 280px at 50% -110px, #334155 10%, #0f172a 60%), #0f172a;
+  }
+  .hero h1 { font-size: clamp(28px, 6vw, 40px); }
+  .hero p { font-size: clamp(13px, 3.6vw, 16px); }
+
+  .about-us { padding-top: 48px; padding-bottom: 40px; }
+  .about-col h1 { font-size: 26px; }
+
+  .btn, .btn-main, .btn-2 {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .btn-2 { margin-left: 0; }
+}
+
+
+@media (max-width: 480px) {
+  .hero { padding: 36px 12px; }
+  .hero h1 { font-size: 26px; }
+  .hero p { font-size: 14px; }
+
+  .about-us { width: 94%; padding-top: 40px; padding-bottom: 32px; }
+  .about-col h1 { font-size: 24px; }
+  .about-col p { font-size: 15px; line-height: 1.7; }
+}
+
+
+@media (min-width: 1440px) {
+  .hero { padding: 96px 24px; }
+  .about-us { width: 76%; }
 }
 
 
