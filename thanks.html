@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Centered Responsive Button</title>
+  <style>
+   
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans";
+      color:#0b1325;
+      background:#939393;
+
+    
+      min-height: 100svh;        
+      display: grid;
+      place-items: center;        
+      padding: 16px;              
+    }
+
+   
+    :root{
+      --btn-pad-y: clamp(10px, 2.2vw, 16px);
+      --btn-pad-x: clamp(16px, 4vw, 28px);
+      --btn-radius: clamp(18px, 5vw, 28px);
+      --btn-border: clamp(2px, 0.7vw, 4px);
+      --btn-font: clamp(18px, 6vw, 32px);
+    }
+
+    
+    .button {
+      cursor: pointer;
+      padding: var(--btn-pad-y) var(--btn-pad-x);
+      border-radius: var(--btn-radius);
+      border: var(--btn-border) solid #2d6a4f; 
+      display: inline-block;
+      overflow: hidden;
+      background: linear-gradient(145deg, #40916c, #52796f);
+      box-shadow:
+        6px 6px 12px rgba(0, 0, 0, 0.4),
+        -6px -6px 12px rgba(255, 255, 255, 0.2),
+        inset 3px 3px 6px rgba(255, 255, 255, 0.3),
+        inset -3px -3px 6px rgba(0, 0, 0, 0.5);
+      position: relative;
+      transition: box-shadow 0.3s ease, transform 0.1s ease;
+      touch-action: manipulation;             
+    }
+
+    .button::before {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(circle, rgba(255,255,255,.1) 1%, transparent 2%),
+        linear-gradient(45deg, rgba(0,0,0,.05) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.05) 75%);
+      background-size: 10px 10px, 20px 20px;
+      opacity: .6;
+      z-index: 0;
+    }
+
+    .button span {
+      font-family: Arial, sans-serif;
+      font-weight: 900;
+      font-size: var(--btn-font);  
+      color: #d8f3dc;
+      text-shadow:
+        1px 1px 2px rgba(0,0,0,.6),
+        -1px -1px 1px rgba(255,255,255,.4);
+      position: relative;
+      display: inline-block;
+      transition: transform .3s ease-out, color .3s ease;
+      z-index: 1;
+      padding: 0 4px;
+    }
+
+    
+    .button span:nth-child(1)::before { transition-delay: 0ms; }
+    .button span:nth-child(2)::before { transition-delay: 100ms; }
+    .button span:nth-child(3)::before { transition-delay: 200ms; }
+    .button span:nth-child(4)::before { transition-delay: 300ms; }
+    .button span:nth-child(5)::before { transition-delay: 400ms; }
+
+    
+    .button:active span {
+      color: #b7e4c7;
+      text-shadow:
+        1px 1px 2px rgba(0,0,0,.7),
+        -1px -1px 1px rgba(255,255,255,.5);
+    }
+    .button:active {
+      box-shadow:
+        inset 4px 4px 8px rgba(0,0,0,.6),
+        inset -4px -4px 8px rgba(255,255,255,.3),
+        2px 2px 4px rgba(0,0,0,.2);
+      transform: scale(.96);
+    }
+
+    
+    .button:focus-visible{
+      outline: 3px solid #95d5b2;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html"><button class="button" aria-label="Hello" >
+    <span>Thanks</span>
+
+    <span>for</span>
+    <span>your</span>
+    <span>message</span> <br>
+        <span>click here to returne </span>
+  </button></a>
+</body>
+</html>
